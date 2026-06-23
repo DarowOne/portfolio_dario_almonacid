@@ -1,0 +1,337 @@
+<!--
+Darow Agency - Single-file portfolio (HTML + CSS)
+Instructions:
+  - Open this file in a browser to preview.
+  - Replace the placeholder images (picsum.photos) with screenshots or images from your sites.
+    Suggested filenames: screenshots/comodoro-home.jpg, screenshots/soycomodoro.jpg, etc.
+  - To export to PDF: File → Print → Save as PDF (or use browser "Print to PDF", select "Background graphics" if available).
+  - To host online: upload this single file and the images folder to any static host (Netlify, GitHub Pages, Vercel, Surge, etc.).
+
+Notes for editing:
+  - Each project card contains a "Replace image" comment showing where to swap.
+  - For better print results, use images sized ~1200px wide and ensure dark text-on-white for legibility.
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dario Almonacid — Portfolio Web</title>
+  <meta name="description" content="Portfolio de Darow Agency — diseño y desarrollo web para turismo, eventos y comunicación">
+  <style>
+    :root{--accent:#1f7a8c;--muted:#6b7280;--maxw:1000px}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.45;color:#111;margin:0;padding:0;background:#fff}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .brand{display:flex;flex-direction:column}
+    h1{margin:0;font-size:28px}
+    .tag{color:var(--muted);font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:22px}
+    .intro{background:#f8fafb;padding:18px;border-radius:12px}
+    .cta{margin-top:16px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+
+    section.projects{margin-top:30px}
+    .project{display:grid;grid-template-columns:320px 1fr;gap:18px;padding:18px;border-radius:10px;border:1px solid #eceff1;margin-bottom:18px}
+    .project img{width:320px;height:200px;object-fit:cover;border-radius:8px}
+    .project h3{margin:0 0 8px 0}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+    .desc{margin:0}
+    .links{margin-top:12px}
+    .link{color:var(--accent);text-decoration:none;font-weight:600}
+
+    aside{background:#fff;padding:12px;border-radius:10px;border:1px solid #eee}
+    .services{display:flex;flex-direction:column;gap:10px}
+    .service{font-weight:600}
+
+    footer{margin-top:32px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .project{grid-template-columns:1fr;}
+      .project img{width:100%;height:220px}
+    }
+
+    /* Print-friendly */
+    @media print{
+      body{background:#fff;color:#000}
+      .wrap{box-shadow:none;margin:0;padding:12px}
+      a[href]:after{content:""}
+      .btn{display:none}
+      header .tag{display:inline}
+      .project{page-break-inside:avoid;border:0}
+      .project + .project{margin-top:6px}
+      footer{display:none}
+    }
+
+    /* Small helper for badges */
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:#eef7f9;color:#0b5258;font-weight:700;font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="width:76px;height:76px;border-radius:14px;background:linear-gradient(135deg,#1f7a8c,#2fb7c9);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px">DA</div>
+      <div class="brand">
+        <h1>Dario Almonacid</h1>
+        <div class="tag">Diseño Web · WordPress · HTML · CSS · JavaScript</div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+    <div class="intro">
+
+<p>
+Diseño y desarrollo sitios web para empresas, emprendedores e instituciones,
+combinando diseño visual, experiencia de usuario y desarrollo técnico.
+</p>
+
+<p>
+Trabajo principalmente con <strong>WordPress</strong>, pero también realizo
+personalizaciones mediante <strong>HTML, CSS y JavaScript</strong> cuando el proyecto
+requiere soluciones que van más allá de las opciones estándar de un constructor visual.
+</p>
+
+<p>
+Mi enfoque es crear sitios rápidos, responsivos y fáciles de administrar,
+cuidando tanto la estética como el rendimiento y la experiencia del usuario
+en todos los dispositivos.
+</p>
+
+<p>
+He desarrollado proyectos para organismos públicos, empresas, agencias,
+alojamientos, eventos y negocios de servicios, participando en distintas etapas
+del proceso: planificación, diseño, implementación, optimización y mantenimiento.
+</p>
+
+<p style="font-weight:600">
+Cada proyecto tiene necesidades diferentes. Por eso busco soluciones prácticas,
+escalables y orientadas a resultados, evitando plantillas genéricas y adaptando
+cada sitio a los objetivos reales del cliente.
+</p>
+
+
+
+<div class="cta">
+<a href="#projects" class="btn">Ver portfolio</a>
+    <a  class="btn" style="margin-left:12px" href="https://wa.me/+542974349847" 
+       style="
+            display: inline-block;
+            padding: 14px 28px;
+            transition: 0.3s;
+       ">
+        Contacto
+    </a>
+
+</div>
+
+</div>
+      
+
+      <aside>
+      
+
+        <hr style="margin:12px 0;border:none;border-top:1px solid #f0f3f5">
+
+      
+
+<div class="services">
+
+<div class="service"><strong>Desarrollo Web</strong></div>
+<div class="service">WordPress</div>
+<div class="service">Elementor Pro</div>
+<div class="service">Gutenberg</div>
+<div class="service">HTML5</div>
+<div class="service">CSS3</div>
+<div class="service">JavaScript</div>
+
+<hr style="margin:8px 0;border:none;border-top:1px solid #f0f3f5">
+
+<div class="service"><strong>Diseño & UX</strong></div>
+<div class="service">Responsive Design</div>
+<div class="service">Mobile First</div>
+<div class="service">UX / UI</div>
+<div class="service">Arquitectura de Información</div>
+<div class="service">Landing Pages</div>
+
+<hr style="margin:8px 0;border:none;border-top:1px solid #f0f3f5">
+
+<div class="service"><strong>Implementación Técnica</strong></div>
+<div class="service">Optimización de velocidad</div>
+<div class="service">SEO On Page</div>
+<div class="service">Hosting & DNS</div>
+<div class="service">Migraciones</div>
+<div class="service">Mantenimiento Web</div>
+
+</div>
+      </aside>
+    </div>
+
+    <section style="margin-top:30px;">
+<h2 style="margin-bottom:10px;">Tecnologías y herramientas</h2>
+
+<p>
+WordPress · Elementor Pro · Gutenberg · HTML5 · CSS3 · JavaScript ·
+SEO On Page · Responsive Design · Hosting · DNS · Optimización Web
+</p>
+
+</section>
+
+    <section id="projects" class="projects">
+      <!-- Project 1: Comodoro Turismo -->
+      <article class="project">
+        <img src="https://i.imgur.com/HkP6MmA.jpeg" alt="Comodoro Turismo - captura" />
+        <div>
+          <h3>Comodoro Turismo</h3>
+          <div class="meta">Turismo / Institucional</div>
+          <p class="desc">
+Diseño e implementación de la página principal utilizando WordPress.
+Se desarrollaron componentes personalizados mediante HTML y CSS para adaptar
+el diseño a los requerimientos del proyecto, optimizando además la experiencia
+responsive y la organización del contenido turístico.
+</p>
+
+          <div class="links"><a class="link" href="https://comodoroturismo.gob.ar/">https://comodoroturismo.gob.ar/</a></div>
+        </div>
+      </article>
+
+      <!-- Project 2: SoyComodoro -->
+      <article class="project">
+        <img src="https://i.imgur.com/WpyixuK.png" alt="SoyComodoro - captura" />
+        <div>
+          <h3>SoyComodoro</h3>
+          <div class="meta">Portal informativo / Institucional</div>
+          <p class="desc">
+Portal informativo en WordPress, creado con bloques de Gutenberg y utilizando el tema PenNews, según lo solicitado por el cliente. La estructura del contenido se organizó cuidadosamente para mejorar la legibilidad, la navegación y la presentación de noticias e información local.
+</p>
+
+          <div class="links"><a class="link" href="https://soycomodoro.com/">https://soycomodoro.com/</a></div>
+        </div>
+      </article>
+
+      <!-- Project 3: VivoTrelew -->
+      <article class="project">
+        <img src="https://i.imgur.com/LmVFTGp.png" alt="VivoTrelew - captura" />
+        <div>
+          <h3>VivoTrelew</h3>
+          <div class="meta">Portal cultural / Turístico</div>
+          <p class="desc">
+Portal turístico y cultural desarrollado en WordPress con Gutenberg,
+basado en el tema PenNews según los requisitos del cliente.
+Enfocado en la organización por categorías, diseños limpios y
+una experiencia de navegación intuitiva en todos los dispositivos.
+</p>
+
+          <div class="links"><a class="link" href="https://vivotrelew.com/">https://vivotrelew.com/</a></div>
+        </div>
+      </article>
+
+      <!-- Project 4: Vaye Comunicación -->
+      <article class="project">
+        <img src="https://i.imgur.com/UdreI9W.png" alt="Vaye Comunicación - captura" />
+        <div>
+          <h3>VAYE Comunicación</h3>
+          <div class="meta">Agencia de comunicación — Corporativo</div>
+        <p class="desc">
+Sitio corporativo desarrollado en WordPress con enfoque en presentación de
+servicios y generación de contactos. Se realizaron personalizaciones mediante
+HTML y CSS para lograr una identidad visual propia y una estructura orientada
+a la conversión.
+</p>
+
+          <div class="links"><a class="link" href="https://vaye.com.ar/">https://vaye.com.ar/</a></div>
+        </div>
+      </article>
+
+      <!-- Project 5: Rincon del parque -->
+      <article class="project">
+        <img src="https://i.imgur.com/7SOfHxZ.png" alt="Rincón del Parque - Pelotero" />
+        <div>
+          <h3>Rincón del Parque - Pelotero</h3>
+          <div class="meta">Eventos y servicios</div>
+          <p class="desc">
+Landing que te lleva a 2 Sitios webs para mostrar espacios para eventos infantiles creado con Elementor Pro. Se utilizaron HTML y CSS personalizados para mejorar el estilo visual y la maquetación. El diseño prioriza una estética cálida y amigable, con una navegación sencilla para padres que buscan servicios, cumpleaños y reservas.
+</p>
+
+          <div class="links"><a class="link" href="https://rincondelparque.com.ar/">https://rincondelparque.com.ar/</a></div>
+        </div>
+      </article>
+
+      <!-- Project 6: El Viejo Bodegón - New -->
+      <article class="project">
+        <img src="https://i.imgur.com/lsT0Xbr.png" alt="El Viejo Bodegón (New) - captura" />
+        <div>
+          <h3>El Viejo Bodegón Eventos (New)</h3>
+          <div class="meta">Diseño</div>
+          <p class="desc">
+Diseño de landig desarrollada con Elementor Pro, adaptada a la empresa con personalizacion de HTML y CSS. Centrado en visibilidad del catering.
+</p>
+
+          <div class="links"><a class="link" href="https://elviejobodegoneventos.com.ar/eventos/">https://elviejobodegoneventos.com.ar/eventos/</a></div>
+        </div>
+      </article>
+
+      <!-- Project 7: Suplementos deportivos -->
+      <article class="project">
+        <img src="https://i.imgur.com/QbrWkMg.png" alt="Suplementos deportivos cordoba" />
+        <div>
+          <h3>Suplementos deportivos Cordoba</h3>
+          <div class="meta">Actualización y rediseño</div>
+          <p class="desc">
+            Se realizaron mejoras de diseño y experiencia de usuario sobre una tienda en MiTiendaNube, trabajando con el tema Cube.
+
+Se aplicó CSS personalizado para corregir limitaciones del tema, logrando secciones a ancho completo, mejor jerarquía visual y mayor coherencia estética en toda la tienda.
+
+También se optimizó la experiencia en mobile, ajustando espaciados, tipografías y componentes interactivos como sliders y acordeones para una navegación más fluida y consistente.
+          </p>
+
+          <div class="links"><a class="link" href="https://www.suplementosdeportivoscba.com.ar/">https://www.suplementosdeportivoscba.com.ar/</a></div>
+        </div>
+      </article>
+
+      <!-- Project 8: Generis Labs -->
+      <article class="project">
+        <img src="https://i.imgur.com/iOIrHZV.png" alt="Generislabs" />
+        <div>
+          <h3>Generislabs</h3>
+          <div class="meta">Optimización técnica y UX</div>
+          <p class="desc">
+           Optimización integral del sitio de Generis Lab enfocada en performance, accesibilidad y experiencia de usuario.
+
+Se mejoró la velocidad de carga mediante compresión Gzip y optimización del tiempo de respuesta del servidor. También se aplicó font-display: swap para mejorar la carga de iconografía sin bloquear el render inicial.
+
+A nivel de UX y accesibilidad, se corrigieron etiquetas en botones e íconos, se eliminó la restricción de zoom en mobile y se reorganizó la jerarquía de encabezados para una estructura más clara y SEO-friendly.
+
+Finalmente, se rediseñó el comportamiento responsive en mobile, mejorando botones, áreas de toque y consistencia visual general.
+          </p>
+
+          <div class="links"><a class="link" href="https://generislabs.com/">https://generislabs.com/</a></div>
+        </div>
+      </article>
+
+
+    </section>
+
+   <section style="text-align: center; margin-top: 40px;">
+    <a  class="btn" style="margin-left:12px" href="https://wa.me/+542974349847" 
+       style="
+            display: inline-block;
+            padding: 14px 28px;
+            transition: 0.3s;
+       ">
+        Contacto
+    </a>
+</section>
+
+    <footer>
+      <div>Dario Almonacid</div>
+      <div>@Todos los derechos reservados</div>
+    
+    </footer>
+  </div>
+</body>
+</html>
